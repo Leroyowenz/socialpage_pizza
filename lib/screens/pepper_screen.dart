@@ -12,148 +12,207 @@ class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: const Color.fromARGB(244, 255, 255, 255),
-      //   elevation: 0,
-      //   actions: [
-      //     Icon(Icons.heat_pump_rounded),
-      //   ],
-      // ),
       backgroundColor: const Color.fromARGB(244, 255, 255, 255),
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            // pizza stack image
-            Stack(
-              alignment: AlignmentDirectional(0, 5),
+      body: Column(
+        children: [
+          // pizza stack image
+
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                width: double.infinity,
+                height: 380.0,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(233, 230, 223, 50),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.elliptical(500, 400),
+                    bottomRight: Radius.elliptical(500, 400),
+                  ),
+                ),
+              ),
+              Container(
+                width: 300.0,
+                height: 300.0,
+                margin: EdgeInsets.only(top: 15),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2.0,
+                      color: Color.fromRGBO(228, 220, 231, 40),
+                    ),
+                    shape: BoxShape.circle),
+              ),
+              Container(
+                width: 250.0,
+                height: 250.0,
+                margin: EdgeInsets.only(top: 15),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2.0,
+                      color: Color.fromRGBO(228, 220, 231, 40),
+                    ),
+                    shape: BoxShape.circle),
+              ),
+              Container(
+                width: 200.0,
+                height: 200.0,
+                margin: EdgeInsets.only(top: 15),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2.0,
+                      color: Color.fromRGBO(228, 220, 231, 40),
+                    ),
+                    shape: BoxShape.circle),
+              ),
+              Container(
+                child: Image.asset(
+                  "assets/images/pizza1.png",
+                ),
+              ),
+              Positioned(
+                right: 20,
+                top: 40,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 2.0,
+                      color: Color.fromRGBO(228, 220, 231, 40),
+                    ),
+                  ),
+                  child: Icon(Icons.favorite_outline),
+                ),
+              ),
+              Positioned(
+                left: 20,
+                top: 40,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 2.0,
+                      color: Color.fromRGBO(228, 220, 231, 40),
+                    ),
+                  ),
+                  child: Icon(Icons.favorite_outline),
+                ),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          // text for pepperroni pizza
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 15, top: 40),
+            child: Column(
               children: [
-                Container(
-                  color: Colors.grey[600],
-                  width: 200.0,
-                  height: 200.0,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "🔥Pepperoni Pizza",
+                      style:
+                          TextStyle(fontSize: 23, fontWeight: FontWeight.w700),
+                    ),
+                    Text(
+                      "🌟 5/5",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                    ),
+                  ],
                 ),
-                Container(
-                  color: Colors.blue[600],
-                  width: 180.0,
-                  height: 180.0,
+                const SizedBox(
+                  height: 15,
                 ),
-                Container(
-                  color: Colors.amber[600],
-                  width: 160.0,
-                  height: 160.0,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "⚡ Pepperoni pizza, Margarita \n      Pizza Margherita Italian \n      Cusine Tomato",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
+                    ),
+                    Text(
+                      "100%",
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                    ),
+                  ],
                 ),
-                Container(
-                  color: Colors.green[600],
-                  width: 140.0,
-                  height: 140.0,
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "🌟 Ingredients",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                    ),
+                    Text(
+                      "(Customable)",
+                      style:
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w300),
+                    ),
+                  ],
                 ),
               ],
             ),
-            SizedBox(
-              height: 20,
-            ),
-            // text for pepperroni pizza
+          ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 10, right: 15, top: 70),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        "🔥Pepperoni Pizza",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w700),
-                      ),
-                      Text("🌟 5/5"),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        "⚡ Pepperoni pizza, Margarita \n      Pizza Margherita Italian \n      Cusine Tomato",
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w300),
-                      ),
-                      Text("100%"),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "🌟 Ingredients",
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w400),
-                      ),
-                      Text(
-                        "(Customable)",
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-
-            // list for ingredients
-
-            // counter button
-            const AddCount(),
-
-            // elevated button with navigator function
-            Container(
-              height: 45.0,
-              width: 340,
-              decoration: BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.circular(20.0),
-                  boxShadow: const [
-                    BoxShadow(blurRadius: 2, color: Colors.black)
-                  ]),
-              child: const Center(
-                child: Text(
-                  "Order Now",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+          // list for ingredients
+          const SizedBox(
+            height: 30,
+          ),
+          // counter button
+          const AddCount(),
+          const SizedBox(
+            height: 30,
+          ),
+          // elevated button with navigator function
+          Container(
+            height: 45.0,
+            width: 340,
+            decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(20.0),
+                boxShadow: const [
+                  BoxShadow(blurRadius: 2, color: Colors.black)
+                ]),
+            child: const Center(
+              child: Text(
+                "Order Now",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
-            // ElevatedButton(
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Colors.orange,
-            //     side: const BorderSide(width: 0.5),
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(50),
-            //     ),
-            //   ),
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: ((context) => const HomePage()),
-            //       ),
-            //     );
-            //   },
-            //   child: const Text(
-            //     "Order Now",
-            //     style: TextStyle(color: Colors.black87),
-            //   ),
-            // )
-          ],
-        ),
+          ),
+          // ElevatedButton(
+          //   style: ElevatedButton.styleFrom(
+          //     backgroundColor: Colors.orange,
+          //     side: const BorderSide(width: 0.5),
+          //     shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(50),
+          //     ),
+          //   ),
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: ((context) => const HomePage()),
+          //       ),
+          //     );
+          //   },
+          //   child: const Text(
+          //     "Order Now",
+          //     style: TextStyle(color: Colors.black87),
+          //   ),
+          // )
+        ],
       ),
     );
   }
@@ -195,10 +254,14 @@ class _AddCountState extends State<AddCount> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  Text("Count"),
-                  Text(
-                    "💲Price",
-                    style: TextStyle(fontSize: 15.0),
+                  Text("〽️Count"),
+                  Padding(
+                    padding: EdgeInsets.only(right: 13),
+                    child: Text(
+                      "💲Price",
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                    ),
                   ),
                 ],
               ),
@@ -255,12 +318,13 @@ class _AddCountState extends State<AddCount> {
                       child: const Text("-", style: TextStyle(fontSize: 25.0))),
                 ),
                 const SizedBox(
-                  width: 225,
+                  width: 222,
                 ),
                 // ignore: prefer_const_constructors
                 Text(
-                  "  💲29.8",
-                  style: const TextStyle(fontSize: 15.0),
+                  "💲29.8",
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
