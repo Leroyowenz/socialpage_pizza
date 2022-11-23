@@ -34,40 +34,38 @@ class _ThirdPageState extends State<ThirdPage> {
               Container(
                 width: 300.0,
                 height: 300.0,
-                margin: EdgeInsets.only(top: 15),
+                margin: const EdgeInsets.only(top: 15),
                 decoration: BoxDecoration(
                     border: Border.all(
                       width: 2.0,
-                      color: Color.fromRGBO(228, 220, 231, 40),
+                      color: const Color.fromRGBO(228, 220, 231, 40),
                     ),
                     shape: BoxShape.circle),
               ),
               Container(
                 width: 250.0,
                 height: 250.0,
-                margin: EdgeInsets.only(top: 15),
+                margin: const EdgeInsets.only(top: 15),
                 decoration: BoxDecoration(
                     border: Border.all(
                       width: 2.0,
-                      color: Color.fromRGBO(228, 220, 231, 40),
+                      color: const Color.fromRGBO(228, 220, 231, 40),
                     ),
                     shape: BoxShape.circle),
               ),
               Container(
                 width: 200.0,
                 height: 200.0,
-                margin: EdgeInsets.only(top: 15),
+                margin: const EdgeInsets.only(top: 15),
                 decoration: BoxDecoration(
                     border: Border.all(
                       width: 2.0,
-                      color: Color.fromRGBO(228, 220, 231, 40),
+                      color: const Color.fromRGBO(228, 220, 231, 40),
                     ),
                     shape: BoxShape.circle),
               ),
-              Container(
-                child: Image.asset(
-                  "assets/images/pizza1.png",
-                ),
+              Image.asset(
+                "assets/images/pizza1.png",
               ),
               Positioned(
                 right: 20,
@@ -77,10 +75,10 @@ class _ThirdPageState extends State<ThirdPage> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       width: 2.0,
-                      color: Color.fromRGBO(228, 220, 231, 40),
+                      color: const Color.fromRGBO(228, 220, 231, 40),
                     ),
                   ),
-                  child: Icon(Icons.favorite_outline),
+                  child: const Icon(Icons.favorite_outline),
                 ),
               ),
               Positioned(
@@ -91,10 +89,10 @@ class _ThirdPageState extends State<ThirdPage> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       width: 2.0,
-                      color: Color.fromRGBO(228, 220, 231, 40),
+                      color: const Color.fromRGBO(228, 220, 231, 40),
                     ),
                   ),
-                  child: Icon(Icons.favorite_outline),
+                  child: const Icon(Icons.favorite_outline),
                 ),
               )
             ],

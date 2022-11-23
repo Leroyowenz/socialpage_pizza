@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:social_page/screens/homepaage_screen.dart';
-import 'package:social_page/screens/pepper_screen.dart';
+// import 'package:social_page/screens/pepper_screen.dart';
+import 'package:social_page/screens/pizza_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme:
           ThemeData(primarySwatch: Colors.blue, brightness: Brightness.light),
-      home: const ThirdPage(),
+      home: const PizzaScreen(),
     );
   }
 }
